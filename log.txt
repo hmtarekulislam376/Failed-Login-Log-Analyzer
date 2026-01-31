@@ -1,0 +1,39 @@
+=== System Login Log ===
+Log File: /var/log/login.log
+Generated: 2026-01-28 14:32:01
+System: Linux server-01 5.15.0-generic
+
+[2026-01-28 08:15:23] [INFO] [SUCCESS] User: admin - Login successful from 192.168.1.105 via SSH
+[2026-01-28 08:15:23] [INFO] [SESSION] Session ID: sess_8f3a9b2c1d4e started for user admin (UID: 1000)
+[2026-01-28 08:22:45] [WARNING] [FAILED] User: root - Failed login attempt from 45.142.212.89 (3 attempts remaining)
+[2026-01-28 08:23:12] [ERROR] [FAILED] User: root - Failed login attempt from 45.142.212.89 (2 attempts remaining)
+[2026-01-28 08:23:45] [ERROR] [FAILED] User: root - Failed login attempt from 45.142.212.89 (1 attempt remaining)
+[2026-01-28 08:24:01] [CRITICAL] [LOCKOUT] IP 45.142.212.89 temporarily blocked due to excessive failed attempts
+[2026-01-28 09:05:33] [INFO] [SUCCESS] User: john.doe - Login successful from 10.0.0.45 via Web Portal
+[2026-01-28 09:05:33] [INFO] [AUTH] Two-factor authentication passed for john.doe
+[2026-01-28 09:12:18] [INFO] [LOGOUT] User: john.doe - Session ended (Duration: 00:06:45)
+[2026-01-28 10:30:05] [WARNING] [TIMEOUT] User: admin - Session timeout after 900 seconds of inactivity
+[2026-01-28 10:30:05] [INFO] [LOGOUT] User: admin - Session terminated due to timeout
+[2026-01-28 11:45:22] [ERROR] [FAILED] User: unknown_user - Authentication failed: User not found (IP: 203.0.113.45)
+[2026-01-28 12:15:44] [INFO] [SUCCESS] User: sarah.smith - Login successful from 192.168.1.110 via SSH
+[2026-01-28 12:16:10] [WARNING] [PERMISSION] User: sarah.smith - Attempted to access restricted directory /etc/shadow
+[2026-01-28 12:30:00] [INFO] [SUCCESS] User: service_account - Automated login from 127.0.0.1 (API Key auth)
+[2026-01-28 12:45:33] [ERROR] [DATABASE] Connection failed during authentication for user: jane.doe (Error: Connection timeout)
+[2026-01-28 13:10:15] [INFO] [SUCCESS] User: jane.doe - Login successful from 172.16.0.23 via VPN
+[2026-01-28 13:25:08] [WARNING] [LOCATION] User: admin - Login from unusual location: Beijing, CN (IP: 198.51.100.22)
+[2026-01-28 13:25:08] [INFO] [EMAIL] Alert sent: Unusual login activity detected for account admin
+[2026-01-28 14:05:19] [CRITICAL] [BREACH] Multiple failed login attempts detected from various IPs targeting user: admin
+[2026-01-28 14:05:20] [INFO] [SECURITY] Account admin temporarily locked for 30 minutes
+[2026-01-28 14:20:45] [INFO] [SUCCESS] User: backup_service - Login successful from 10.0.0.2 (Key-based auth)
+[2026-01-28 14:30:00] [INFO] [SYSTEM] Log rotation initiated. Archiving logs older than 30 days
+[2026-01-28 14:32:01] [INFO] [SYSTEM] Log file maintenance completed
+[2026-01-28 5:23:12] [ERROR] [FAILED] User: root - Failed login attempt from 45.142.212.60 (2 attempts remaining)
+[2026-01-28 5:23:12] [ERROR] [FAILED] User: root - Failed login attempt from 45.142.212.60 (2 attempts remaining)
+
+
+
+=== End of Log ===
+Total Entries: 25
+Security Alerts: 4
+Successful Logins: 6
+Failed Attempts: 6
